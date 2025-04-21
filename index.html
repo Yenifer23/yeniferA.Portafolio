@@ -6,6 +6,24 @@
   <title>Yenifer Romero - Portfolio</title>
   <link rel="stylesheet" href="estilos.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .justificado {
+      text-align: justify;
+    }
+    .contenido-flex img,
+    .galeria img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #contacto ul {
+      margin-bottom: 1em;
+    }
+    #contacto form button[type="submit"] {
+      display: block;
+      margin: 1em auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -31,7 +49,7 @@
     <h2>Sobre mí</h2>
     <div class="contenido-flex">
       <img src="imagenes/foto-perfil.jpeg" alt="Foto de Yenifer" />
-      <p>
+      <p class="justificado">
         Soy Técnica en Informática en formación, con una fuerte pasión por el desarrollo de software y la tecnología como medio para transformar el día a día de las personas. Me gusta aprender constantemente y enfrentar desafíos que me impulsen a mejorar.
         <br><br>
         A lo largo de mi carrera he trabajado con Java, HTML, CSS, bases de datos, herramientas de oficina y plataformas de diseño como Canva. Considero que la informática no solo es código: es creatividad, organización, y entender a quienes van a usar nuestras soluciones.
@@ -64,7 +82,7 @@
       <br><br>
       Si estás buscando una profesional proactiva, creativa y con una genuina vocación de crecimiento, estoy preparada para aportar mi energía y conocimientos en cada nuevo desafío.
     </p>
-    </section>
+  </section>
   
   <section id="contacto" data-aos="fade-up">
     <h2>Contacto</h2>
@@ -74,10 +92,10 @@
       <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-      <button type="submit">Enviar</button>
+      <button type="submit">Enviar" style="display: block; margin: 1em auto;">Enviar</button>
     </form>
     <p>También podés encontrarme en:</p>
-    <ul>
+    <ul style="margin-bottom: 1em;">
       <li><a href="https://www.linkedin.com/in/yenifer-romero-4a4b31250/" target="_blank">LinkedIn</a></li>
       <li><a href="https://github.com/Yenifer23" target="_blank">GitHub</a></li>
     </ul>
