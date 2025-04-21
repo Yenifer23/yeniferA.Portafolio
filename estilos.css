@@ -256,33 +256,5 @@ footer {
     flex-direction: column;
   }
 
-  nav {
-    flex-direction: column; /* Apila los enlaces verticalmente */
-    align-items: center; /* Centra los enlaces horizontalmente */
-    padding: 0.5rem 0; /* Reduce el padding vertical */
-  }
-
-  nav a {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 10px 0; /* Reduce el padding horizontal y aumenta el vertical para espaciado */
-    text-align: center; /* Centra el texto de los enlaces */
-    border-bottom: 1px solid #2c2c2c; /* Añade un separador visual entre enlaces */
-  }
-
-  nav a:last-child {
-    border-bottom: none; /* Elimina el borde del último enlace */
-  }
-
-  .contenido-flex {
-    flex-direction: column;
-  }
-
-  .justificado {
-    text-align: left;
-  }
-
-  section#proyecto p.justificado,
-  section#porque-yo p.justificado {
-    text-align: left;
-  }
+  /* Aquí eliminé las reglas que modificaban la navegación */
 }
