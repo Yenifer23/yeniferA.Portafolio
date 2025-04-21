@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yenifer Romero - Portfolio</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>YENIFER <span>ROMERO</span></h1>
+      <p>Técnica en Informática | Universidad Nacional de La Rioja</p>
+      <div class="btn-group">
+        <a href="#proyecto" class="btn">Ver Proyecto</a>
+        <a href="#contacto" class="btn">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyecto">Proyecto</a>
+    <a href="#porque-yo">¿Por qué elegirme?</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi" data-aos="fade-up">
+    <h2>Sobre mí</h2>
+    <div class="contenido-flex">
+      <img src="WhatsApp Image 2025-04-21 at 00.57.56.jpeg" alt="Foto de Yenifer" />
+      <p>
+        Soy Técnica en Informática en formación, con una fuerte pasión por el desarrollo de software y la tecnología como medio para transformar el día a día de las personas. Me gusta aprender constantemente y enfrentar desafíos que me impulsen a mejorar.
+        <br><br>
+        A lo largo de mi carrera he trabajado con Java, HTML, CSS, bases de datos, herramientas de oficina y plataformas de diseño como Canva. Considero que la informática no solo es código: es creatividad, organización, y entender a quienes van a usar nuestras soluciones.
+      </p>
+    </div>
+  </section>
+
+  <section id="proyecto" data-aos="fade-up">
+    <h2>Proyecto: Sistema de Turnos</h2>
+    <p class="justificado">
+      Este proyecto fue una experiencia clave en mi formación. Diseñé e implementé un sistema completo de turnos médicos en Java, utilizando Swing para la interfaz. Se pueden registrar pacientes, asignar doctores, programar citas y exportar toda la información en PDF. Además, una tabla dinámica permite visualizar los datos de forma ordenada y clara.
+      <br><br>
+      El objetivo era optimizar el flujo de atención en clínicas y consultorios, permitiendo al personal gestionar todo desde una sola aplicación. Fue un desafío técnico, pero sobre todo, una oportunidad para pensar en los usuarios reales del sistema.
+    </p>
+    <div class="galeria" data-aos="zoom-in-up">
+      <img src="WhatsApp Image 2025-04-15 at 17.08.06 (1).jpeg" alt="Sistema de Turnos 1" />
+      <img src="WhatsApp Image 2025-04-15 at 17.08.35 (1).jpeg" alt="Sistema de Turnos 2" />
+      <img src="WhatsApp Image 2025-04-15 at 17.08.55 (1).jpeg" alt="Sistema de Turnos 3" />
+      <img src="WhatsApp Image 2025-04-15 at 17.12.06 (1).jpeg" alt="Sistema de Turnos 4" />
+      <img src="WhatsApp Image 2025-04-15 at 17.10.14 (1).jpeg" alt="Sistema de Turnos 5" />
+    </div>
+  </section>
+
+  <section id="porque-yo" data-aos="fade-up">
+    <h2>¿Por qué elegirme?</h2>
+    <p class="justificado">
+      Mi formación académica me ha brindado una base sólida que trasciende los conocimientos técnicos: me enseñó a pensar de manera crítica, a organizarme con eficiencia y a abordar cada desafío con una visión integral. Combino lo técnico con lo visual, y la funcionalidad con la dimensión humana, buscando siempre soluciones que generen impacto real.
+      <br><br>
+      Me adapto con rapidez a nuevas herramientas y considero el aprendizaje constante como un motor de crecimiento personal y profesional. Trabajo con responsabilidad, compromiso y pasión, involucrándome en cada proyecto como si fuera propio. Disfruto creando soluciones que no solo funcionan, sino que transmiten calidad, propósito y valor.
+      <br><br>
+      Si estás buscando una profesional proactiva, creativa y con una genuina vocación de crecimiento, estoy preparada para aportar mi energía y conocimientos en cada nuevo desafío.
+    </p>
+  </section>
+  
+  <section id="contacto" data-aos="fade-up">
+    <h2>Contacto</h2>
+    <form action="https://formsubmit.co/yeniferromerouni@gmail.com" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu email" required />
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <button type="submit">Enviar</button>
+    </form>
+    <p>También podés encontrarme en:</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/yenifer-romero-4a4b31250/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/Yenifer23" target="_blank">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Yenifer Romero</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  </script>
+
+</body>
+</html>
