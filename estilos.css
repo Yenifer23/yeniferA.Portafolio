@@ -5,11 +5,47 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000; /* Fondo negro más intenso */
+  background-color: #000;
   color: #f2f2f2;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centrado total del contenido principal */
+.hero {
+  background-color: #000;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hero .overlay {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #ccc;
 }
 
 h1,
@@ -20,38 +56,7 @@ h2 {
 
 h1 span,
 h2 span {
-  color: #ff69b4; /* Rosa más vibrante */
-}
-
-.hero {
-  background-color: #000; /* Fondo negro más intenso */
-  padding: 100px 20px;
-  text-align: center;
-  display: flex; /* Añadimos flexbox al contenedor hero */
-  flex-direction: column; /* Alineamos los elementos en columna */
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  min-height: 100vh; /* Asegura que el hero ocupe al menos el alto de la pantalla */
-}
-
-.hero .overlay { /* Si tienes un overlay, también centramos su contenido */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; /* Aseguramos que el texto dentro del overlay también esté centrado si es necesario */
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem; /* Reducimos un poco el margen inferior del título */
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem; /* Reducimos un poco el margen superior del párrafo */
-  color: #ccc;
+  color: #ff69b4;
 }
 
 .btn-group {
@@ -60,7 +65,7 @@ h2 span {
 
 .btn {
   display: inline-block;
-  background-color: #ff69b4; /* Rosa más vibrante */
+  background-color: #ff69b4;
   color: #000;
   padding: 12px 24px;
   margin: 10px;
@@ -71,12 +76,12 @@ h2 span {
 }
 
 .btn:hover {
-  background-color: #ff80c1; /* Rosa ligeramente más claro al pasar el mouse */
+  background-color: #ff80c1;
   transform: scale(1.05);
 }
 
 nav {
-  background-color: #1a1a1a; /* Negro ligeramente más claro que el fondo */
+  background-color: #1a1a1a;
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -88,7 +93,7 @@ nav {
 }
 
 nav a {
-  color: #ff69b4; /* Rosa más vibrante */
+  color: #ff69b4;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -101,6 +106,7 @@ section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+  text-align: center;
 }
 
 .contenido-flex {
@@ -109,14 +115,15 @@ section {
   align-items: center;
   gap: 40px;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .contenido-flex img {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 0%; /* Removemos el border-radius para que la foto no sea redonda */
-  border: 3px solid #ff69b4; /* Rosa más vibrante */
+  border-radius: 0%;
+  border: 3px solid #ff69b4;
 }
 
 .justificado {
@@ -126,10 +133,10 @@ section {
 
 section#proyecto p.justificado,
 section#porque-yo p.justificado {
-  text-align: center; /* Centramos el texto */
-  max-width: 80%; /* O un valor que se ajuste a tu diseño */
-  margin-left: auto; /* Para centrar el bloque de texto */
-  margin-right: auto; /* Para centrar el bloque de texto */
+  text-align: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .galeria {
@@ -145,7 +152,7 @@ section#porque-yo p.justificado {
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2); /* Ajustando el color de la sombra */
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
 }
 
 .galeria img:hover {
@@ -185,7 +192,7 @@ textarea {
 }
 
 button {
-  background-color: #ff69b4; /* Rosa más vibrante */
+  background-color: #ff69b4;
   color: #000;
   cursor: pointer;
   font-weight: bold;
@@ -194,7 +201,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff80c1; /* Rosa ligeramente más claro al pasar el mouse */
+  background-color: #ff80c1;
 }
 
 ul {
@@ -208,7 +215,7 @@ ul li {
 }
 
 ul a {
-  color: #ff69b4; /* Rosa más vibrante */
+  color: #ff69b4;
   text-decoration: none;
 }
 
@@ -223,3 +230,4 @@ footer {
   color: #aaa;
   margin-top: 40px;
 }
+
