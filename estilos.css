@@ -124,6 +124,14 @@ section {
   max-width: 600px;
 }
 
+section#proyecto p.justificado,
+section#porque-yo p.justificado {
+  text-align: center; /* Centramos el texto */
+  max-width: 80%; /* O un valor que se ajuste a tu diseño */
+  margin-left: auto; /* Para centrar el bloque de texto */
+  margin-right: auto; /* Para centrar el bloque de texto */
+}
+
 .galeria {
   display: flex;
   flex-wrap: wrap;
