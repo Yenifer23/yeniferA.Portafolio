@@ -12,12 +12,14 @@ body {
   line-height: 1.6;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-h1 span, h2 span {
+h1 span,
+h2 span {
   color: #ff69b4; /* Rosa más vibrante */
 }
 
@@ -25,16 +27,30 @@ h1 span, h2 span {
   background-color: #000; /* Fondo negro más intenso */
   padding: 100px 20px;
   text-align: center;
+  display: flex; /* Añadimos flexbox al contenedor hero */
+  flex-direction: column; /* Alineamos los elementos en columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  min-height: 100vh; /* Asegura que el hero ocupe al menos el alto de la pantalla */
+}
+
+.hero .overlay { /* Si tienes un overlay, también centramos su contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Aseguramos que el texto dentro del overlay también esté centrado si es necesario */
 }
 
 .hero h1 {
   font-size: 3rem;
   font-weight: bold;
+  margin-bottom: 0.5rem; /* Reducimos un poco el margen inferior del título */
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem; /* Reducimos un poco el margen superior del párrafo */
   color: #ccc;
 }
 
@@ -99,7 +115,7 @@ section {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 0%; /* Removemos el border-radius para que la foto no sea redonda */
   border: 3px solid #ff69b4; /* Rosa más vibrante */
 }
 
