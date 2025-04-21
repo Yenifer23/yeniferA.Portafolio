@@ -21,29 +21,29 @@ body {
 /* Centrado total del contenido principal */
 .hero {
   background-color: #000;
-  padding: 80px 20px;
+  padding: 0 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: auto;
+  min-height: 100vh;
 }
 
 .hero .overlay {
-  max-width: 95%;
+  max-width: 800px;
   width: 100%;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   color: #ccc;
 }
@@ -60,10 +60,7 @@ h2 span {
 }
 
 .btn-group {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 2rem;
 }
 
 .btn {
@@ -76,20 +73,18 @@ h2 span {
   font-weight: bold;
   border-radius: 5px;
   transition: all 0.3s ease;
-  width: 80%;
-  text-align: center;
 }
 
 .btn:hover {
   background-color: #ff80c1;
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 nav {
   background-color: #1a1a1a;
   display: flex;
-  justify-content: space-around;
-  gap: 0;
+  justify-content: center;
+  gap: 40px;
   padding: 1rem 0;
   font-weight: bold;
   position: sticky;
@@ -101,9 +96,6 @@ nav a {
   color: #ff69b4;
   text-decoration: none;
   transition: color 0.3s ease;
-  padding: 10px 15px;
-  display: block;
-  text-align: center;
 }
 
 nav a:hover {
@@ -111,9 +103,9 @@ nav a:hover {
 }
 
 section {
-  padding: 40px 20px;
-  max-width: 100%;
-  margin: 0 auto;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
   text-align: center;
 }
 
@@ -121,63 +113,61 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
   margin-top: 20px;
-  flex-direction: column;
 }
 
 .contenido-flex img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 0%;
   border: 3px solid #ff69b4;
-  margin-bottom: 15px;
 }
 
 .justificado {
-  text-align: left;
-  max-width: 100%;
+  text-align: justify;
+  max-width: 600px;
 }
 
 section#proyecto p.justificado,
 section#porque-yo p.justificado {
-  text-align: left;
-  max-width: 100%;
+  text-align: center;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .galeria img {
-  width: 100%;
+  width: 240px;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s;
-  box-shadow: 0 0 5px rgba(255, 105, 180, 0.2);
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
 }
 
 .galeria img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 form {
-  max-width: 95%;
-  margin: 20px auto;
+  max-width: 600px;
+  margin: auto;
 }
 
 .form-grid {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 input,
@@ -188,7 +178,7 @@ button {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 input,
@@ -198,7 +188,7 @@ textarea {
 }
 
 textarea {
-  resize: vertical;
+  resize: none;
 }
 
 button {
@@ -206,7 +196,7 @@ button {
   color: #000;
   cursor: pointer;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -221,7 +211,7 @@ ul {
 }
 
 ul li {
-  margin: 8px 0;
+  margin: 5px 0;
 }
 
 ul a {
@@ -238,23 +228,5 @@ footer {
   padding: 20px;
   background-color: #111;
   color: #aaa;
-  margin-top: 30px;
-}
-
-/* Media Query para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 120px;
-    padding-bottom: 80px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .btn-group {
-    flex-direction: column;
-  }
-
-  /* Aquí eliminé las reglas que modificaban la navegación */
+  margin-top: 40px;
 }
