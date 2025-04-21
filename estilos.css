@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset básico (sin cambios) */
 * {
   margin: 0;
   padding: 0;
@@ -21,29 +21,29 @@ body {
 /* Centrado total del contenido principal */
 .hero {
   background-color: #000;
-  padding: 0 20px;
+  padding: 80px 20px; /* Aumenté el padding vertical para más espacio en pantallas pequeñas */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: auto; /* Cambié a auto para que la altura se ajuste al contenido en móviles */
 }
 
 .hero .overlay {
-  max-width: 800px;
+  max-width: 95%; /* Reduje el ancho máximo para evitar desbordamiento en móviles */
   width: 100%;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* Reduje el tamaño de la fuente para pantallas más pequeñas */
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduje el tamaño de la fuente para pantallas más pequeñas */
   margin-top: 0.5rem;
   color: #ccc;
 }
@@ -60,7 +60,10 @@ h2 span {
 }
 
 .btn-group {
-  margin-top: 2rem;
+  margin-top: 1.5rem; /* Reduje un poco el margen superior */
+  display: flex; /* Para alinear los botones horizontalmente en pantallas más grandes */
+  flex-direction: column; /* Para apilar los botones en pantallas pequeñas */
+  align-items: center; /* Centrar los botones cuando están apilados */
 }
 
 .btn {
@@ -73,18 +76,20 @@ h2 span {
   font-weight: bold;
   border-radius: 5px;
   transition: all 0.3s ease;
+  width: 80%; /* Ancho para que los botones ocupen más espacio en móviles */
+  text-align: center; /* Centrar el texto dentro del botón */
 }
 
 .btn:hover {
   background-color: #ff80c1;
-  transform: scale(1.05);
+  transform: scale(1.02); /* Reduje ligeramente la escala en hover para móviles */
 }
 
 nav {
   background-color: #1a1a1a;
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-around; /* Espaciado uniforme entre los enlaces */
+  gap: 0; /* Elimino el gap para un mejor espaciado en móviles */
   padding: 1rem 0;
   font-weight: bold;
   position: sticky;
@@ -96,6 +101,9 @@ nav a {
   color: #ff69b4;
   text-decoration: none;
   transition: color 0.3s ease;
+  padding: 10px 15px; /* Añadí padding para que los enlaces sean más fáciles de tocar */
+  display: block; /* Para que cada enlace ocupe una línea completa en pantallas pequeñas si es necesario */
+  text-align: center; /* Centrar el texto de los enlaces en móviles */
 }
 
 nav a:hover {
@@ -103,9 +111,9 @@ nav a:hover {
 }
 
 section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 40px 20px; /* Reduje el padding vertical para más contenido visible en móviles */
+  max-width: 100%; /* El ancho máximo ahora es el 100% para ocupar todo el ancho en móviles */
+  margin: 0 auto; /* Elimino el margen automático para que ocupe todo el ancho */
   text-align: center;
 }
 
@@ -113,61 +121,63 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  gap: 20px; /* Reduje el gap */
   justify-content: center;
   margin-top: 20px;
+  flex-direction: column; /* Apilo los elementos en columnas en pantallas pequeñas */
 }
 
 .contenido-flex img {
-  width: 200px;
-  height: 200px;
+  width: 150px; /* Reduje el tamaño de la imagen de perfil */
+  height: 150px; /* Reduje el tamaño de la imagen de perfil */
   object-fit: cover;
   border-radius: 0%;
   border: 3px solid #ff69b4;
+  margin-bottom: 15px; /* Añadí margen inferior para separar la imagen del texto */
 }
 
 .justificado {
-  text-align: justify;
-  max-width: 600px;
+  text-align: left; /* Alineé el texto a la izquierda para una mejor lectura en móviles */
+  max-width: 100%; /* El texto ocupa todo el ancho disponible */
 }
 
 section#proyecto p.justificado,
 section#porque-yo p.justificado {
-  text-align: center;
-  max-width: 80%;
+  text-align: left; /* Alineé el texto a la izquierda para una mejor lectura en móviles */
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  display: grid; /* Utilicé grid para un diseño más flexible en la galería */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas autoajustables con un mínimo de 150px */
+  gap: 10px; /* Reduje el gap en la galería */
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .galeria img {
-  width: 240px;
+  width: 100%; /* Las imágenes ocupan todo el ancho de su celda en la grid */
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+  box-shadow: 0 0 5px rgba(255, 105, 180, 0.2); /* Reduje la sombra */
 }
 
 .galeria img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03); /* Reduje ligeramente la escala en hover para móviles */
 }
 
 form {
-  max-width: 600px;
-  margin: auto;
+  max-width: 95%; /* El formulario ocupa casi todo el ancho en móviles */
+  margin: 20px auto; /* Añadí margen superior e inferior */
 }
 
 .form-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column; /* Apilo los elementos del formulario en columnas en móviles */
+  gap: 10px; /* Reduje el gap en el formulario */
 }
 
 input,
@@ -178,7 +188,7 @@ button {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: 5px; /* Reduje el margen superior */
 }
 
 input,
@@ -188,7 +198,7 @@ textarea {
 }
 
 textarea {
-  resize: none;
+  resize: vertical; /* Permitir la redimensión vertical en móviles */
 }
 
 button {
@@ -196,7 +206,7 @@ button {
   color: #000;
   cursor: pointer;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 10px; /* Reduje el margen superior del botón */
   transition: background-color 0.3s ease;
 }
 
@@ -211,7 +221,7 @@ ul {
 }
 
 ul li {
-  margin: 5px 0;
+  margin: 8px 0; /* Aumenté un poco el margen vertical en la lista */
 }
 
 ul a {
@@ -228,5 +238,50 @@ footer {
   padding: 20px;
   background-color: #111;
   color: #aaa;
-  margin-top: 40px;
+  margin-top: 30px; /* Reduje el margen superior del footer */
+}
+
+/* Media Query para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px; /* Ajuste el padding superior en móviles si es necesario */
+    padding-bottom: 80px;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Aún más pequeño en pantallas muy pequeñas */
+  }
+
+  .btn-group {
+    flex-direction: column; /* Asegura que los botones estén apilados */
+  }
+
+  nav {
+    flex-direction: column; /* Apila los enlaces de navegación */
+    align-items: center; /* Centra los enlaces de navegación */
+    padding: 0.5rem 0; /* Reduce el padding de la navegación */
+  }
+
+  nav a {
+    padding: 8px 15px; /* Reduce el padding de los enlaces de navegación */
+    border-bottom: 1px solid #2c2c2c; /* Añade un separador visual entre enlaces */
+    width: 100%; /* Ocupa todo el ancho */
+  }
+
+  nav a:last-child {
+    border-bottom: none; /* Elimina el borde del último enlace */
+  }
+
+  .contenido-flex {
+    flex-direction: column; /* Asegura que la imagen y el texto estén apilados */
+  }
+
+  .justificado {
+    text-align: left; /* Mejora la lectura en pantallas pequeñas */
+  }
+
+  section#proyecto p.justificado,
+  section#porque-yo p.justificado {
+    text-align: left;
+  }
 }
